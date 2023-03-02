@@ -18,7 +18,7 @@ layout: page
         try {
           const response = await fetch('https://quixotic326-minimal-nlp.hf.space/run/predict', {
             method: "POST", 
-            body: JSON.stringify({ "data": textInput }),
+            body: JSON.stringify({ "data": [textInput] }),
             headers: { "Content-Type": "application/json" }
           });
           const json = await response.json();
